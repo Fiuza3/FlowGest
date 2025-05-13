@@ -1,0 +1,26 @@
+import { createVuetify } from 'vuetify'
+import 'vuetify/styles'
+import { aliases, mdi } from 'vuetify/iconsets/mdi'
+
+export default createVuetify({
+  theme: {
+    defaultTheme: 'light',
+    themes: {
+      light: {
+        dark: false,
+        colors: {
+          background: '#ffffff',
+          surface: '#ffffff',
+          primary: '#000000',
+          secondary: '#808080',
+          error: '#ff0000',
+        },
+      },
+    },
+  },
+  icons: {
+    defaultSet: 'mdi',
+    aliases,
+    sets: { mdi },
+  },
+})

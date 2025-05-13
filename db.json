@@ -1,0 +1,15 @@
+{
+  "users": [],
+  "units": [
+    {
+      "id": 1,
+      "name": "Unidade Central",
+      "balance": 10000,
+      "employees": [],
+      "tasks": [],
+      "notes": []
+    }
+  ],
+  "transactions": [],
+  "notes": []
+}
