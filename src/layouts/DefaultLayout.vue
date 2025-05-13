@@ -1,13 +1,13 @@
 <template>
   <div class="layout">
     <header class="header">
-      <img src="@/assets/LOGO+NOME.png" alt="Logo" style="height: 40px; margin-right: 10px;" />
+      <img src="@/assets/LOGO+NOME.png" alt="Logo" class="header__logo" />
     </header>
     <div class="main">
       <aside class="sidebar">
-        <router-link to="/">Home</router-link>
-        <router-link to="/estoque">ESTOQUE</router-link>
-        <router-link to="/opcao2">FINANCE</router-link>
+        <router-link to="/" class="sidebar__link">Home</router-link>
+        <router-link to="/estoque" class="sidebar__link">ESTOQUE</router-link>
+        <router-link to="/opcao2" class="sidebar__link">FINANCE</router-link>
       </aside>
       <main class="content">
         <router-view />
@@ -16,7 +16,11 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+$dark-blue: #0A1828;
+$turquoise: #178582;
+$gold: #BFA181;
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -24,7 +28,7 @@
 }
 
 .header {
-  background: red;
+  background: $dark-blue;
   color: white;
   height: 60px;
   display: flex;
@@ -33,6 +37,11 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 10;
+
+  &__logo {
+    height: 40px;
+    margin-right: 10px;
+  }
 }
 
 .main {
@@ -41,23 +50,37 @@
 }
 
 .sidebar {
-  background: green;
+  background: $dark-blue;
   width: 200px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
-  border-right: 4px solid rgb(0, 0, 0); /* Borda dourada na direita */
-}
+  border-right: 4px solid $gold;
 
-.sidebar a {
-  color: white;
-  margin-bottom: 10px;
-  text-decoration: none;
+  &__link {
+    color: white;
+    margin-bottom: 15px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    
+    &:hover {
+      background: $turquoise;
+      transform: translateX(5px);
+    }
+    
+    &.router-link-active {
+      background: $turquoise;
+      color: white;
+    }
+  }
 }
 
 .content {
-  background: darkcyan;
+  background: #f5f5f5;
   flex: 1;
   padding: 20px;
 }
