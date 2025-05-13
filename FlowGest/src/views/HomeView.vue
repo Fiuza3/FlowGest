@@ -1,9 +1,14 @@
+<template>
+  <div>
+    <h1>Página Inicial</h1>
+    <p>Bem-vindo ao sistema.</p>
+  </div>
+</template>
+
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+// Nenhuma lógica por enquanto
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped>
+/* Nada, pois o layout já cuida do estilo global */
+</style>
