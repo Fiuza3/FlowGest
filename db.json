@@ -1,12 +1,3 @@
 {
-  "itens": [
-    {
-      "id": "e552",
-      "nome": "Teste ",
-      "quantidade": 1,
-      "preco": 1000,
-      "observacao": "na",
-      "imagem": {}
-    }
-  ]
+  "itens": []
 }
