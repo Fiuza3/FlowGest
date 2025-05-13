@@ -3,6 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: sans-serif;
+
+:root {
+  --dark-blue: #0A1828;
+  --turquoise: #178582;
+  --gold: #BFA181;
 }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: var(--dark-blue);
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+</style>
